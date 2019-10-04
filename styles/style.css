@@ -29,7 +29,7 @@ html {
 
 header {
     font-family: 'Notable', sans-serif;
-    color: white;
+    color: rgb(128, 110, 110);
     position: fixed;
     height: 50px;
     width: 100%;
