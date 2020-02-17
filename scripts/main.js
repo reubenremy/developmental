@@ -133,3 +133,13 @@ const ch_1 = document.getElementById('ch_1').innerHTML = "A) " + sampleResponse.
 const ch_2 = document.getElementById('ch_2').innerHTML = "B) " + sampleResponse.results[0].incorrect_answers[0];
 const ch_3 = document.getElementById('ch_3').innerHTML = "C) " + sampleResponse.results[0].incorrect_answers[1];
 const ch_4 = document.getElementById('ch_4').innerHTML = "D) " + sampleResponse.results[0].incorrect_answers[2];
+
+const questionURL = 'https://opentdb.com/api.php?amount=10&category=9'
+const questionData = get(questionURL);
+
+console.log("Get Promise =>", questionData.then(function(data) {
+    const questions = data.results;
+    console.log('1.Get Questions =>',questions);
+    console.log('**Note that Questions is now an array that you can iterate through**');
+    questions.forEach(q => alert(q.question));
+}))
